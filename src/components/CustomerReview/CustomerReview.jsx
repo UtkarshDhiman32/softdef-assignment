@@ -1,6 +1,5 @@
 import React from 'react'
 
-// --- Data for the 3 review cards ---
 const reviewData = [
   {
     // Maine aapka 'testinomial.png' placeholder ke taur par use kiya hai
@@ -21,25 +20,18 @@ const reviewData = [
 ];
 
 
-// --- Reusable Review Card Component ---
 const ReviewCard = ({ review }) => {
   return (
-    // FIX 1: Sirf 'rounded-[70px]' rakha hai. 'border-t-2' aur 'border-r-2' use kiya hai.
     <div className="bg-[#333D33]/60 rounded-[70px] backdrop-blur-md p-8 border-t-2 border-r-2 border-white/20 flex flex-col gap-4 shadow-lg">
       
-      {/* FIX 2: Top Part ko layout kiya: Image left mein, Name/Stars right mein */}
-      <div className="flex items-start gap-4"> {/* Changed items-center to items-start */}
+      <div className="flex items-start gap-4">
         <img 
           src={review.imgSrc} 
           alt={review.name} 
-          // FIX 3: Image se extra border hata diya
-          className="w-16 h-16 rounded-full object-cover mt-1" // Thoda margin add kiya alignment ke liye
-          onError={(e) => e.target.src = 'https://placehold.co/64x64/2A332A/FFFFFF?text=Img'}
+          className="w-16 h-16 rounded-full object-cover mt-1" 
         />
-        {/* FIX 4: Name aur Stars ko ek group mein daala */}
         <div className="flex flex-col">
           <h3 className="text-2xl font-semibold text-white">{review.name}</h3>
-          {/* FIX 5: Stars se negative margin hata diya. 5 poore stars. */}
           <div className="flex items-center gap-1 mt-1"> {/* Thoda margin add kiya */}
             <span className="text-yellow-400 text-lg">★</span>
             <span className="text-yellow-400 text-lg">★</span>
@@ -50,8 +42,7 @@ const ReviewCard = ({ review }) => {
         </div>
       </div>
       
-      {/* Review Text (No change needed here) */}
-      <p className="text-gray-300 font-light text-md mt-2"> {/* Thoda margin add kiya */}
+      <p className="text-gray-300 font-light text-md mt-2"> 
         {review.review}
       </p>
     </div>

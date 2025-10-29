@@ -52,10 +52,10 @@ const Best = () => {
   const currentSlide = slideData[currentIndex];
 
   return (
-    // Main container - Added overflow-x-hidden for extra safety
+    // Main container 
     <div className='flex flex-col items-center w-full max-w-6xl mx-auto px-4 py-16 text-gray-300 gap-12 md:gap-20 overflow-x-hidden'>
 
-      {/* --- Title Section --- Responsive Text Size */}
+      {/*  Title Section  */}
       <h2 className="relative text-4xl md:text-5xl font-semibold px-10 py-5 text-white text-center">
         <span
           className="absolute bottom-0 left-0 w-10 h-12 md:w-12 md:h-14 border-b-4 border-l-4 border-[#50790B] rounded-bl-xl"
@@ -67,7 +67,6 @@ const Best = () => {
       </h2>
 
       {/* --- Main Content Card --- */}
-      {/* Increased min-h slightly for more consistent height */}
       <div className="relative bg-[#333D33]/60 rounded-[70px] backdrop-blur-md p-6 md:p-12 border-l-2 border-r-2 border-white/20 w-full flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12 shadow-lg min-h-[550px] md:min-h-[500px]">
 
         {/* Left Side: Image container */}
@@ -75,43 +74,31 @@ const Best = () => {
           <img
             src={currentSlide.imgSrc}
             alt="Best O2 Plant"
-            // Mobile: Relative, centered, slightly smaller, margin-top
-            // Tablet(md): Absolute, centered vertically, slightly off-left
-            // Laptop(lg): Absolute, centered vertically, further off-left, larger
             className='relative md:absolute -mt-10 md:mt-0 md:-left-4 lg:-left-6 md:top-1/2 md:-translate-y-1/2 w-4/5 sm:w-3/5 md:w-[400px] lg:w-[550px] h-auto object-contain mx-auto md:mx-0 z-10'
             onError={(e) => e.target.src = 'https://placehold.co/600x600/2A332A/FFFFFF?text=Image+Error'}
           />
         </div>
 
         {/* Right Side: Text Content */}
-        {/* Adjusted width for tablet (md:w-1/2) */}
         <div className="w-full md:w-1/2 flex flex-col justify-between gap-4 md:ml-auto text-center md:text-left py-4">
 
-          {/* FIX: Replaced fixed height with min-height */}
-          <div className="min-h-[200px] md:min-h-[250px]"> {/* Wrapper for text content with MIN-height */}
-            {/* Responsive heading size */}
+          <div className="min-h-[200px] md:min-h-[250px]"> 
             <h2 className='font-semibold text-2xl md:text-3xl lg:text-4xl text-white'>{currentSlide.heading}</h2>
 
-            {/* Responsive paragraph size */}
             <p className='font-light text-base md:text-lg text-gray-300 mt-4'>
               {currentSlide.p1}
             </p>
 
-            {/* Responsive paragraph size */}
             <p className='font-light text-base md:text-lg text-gray-300 mt-2'>
               {currentSlide.p2}
             </p>
           </div>
 
-          {/* Button and Pagination Row */}
-          {/* Responsive button/pagination layout */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6">
-            {/* Responsive button */}
             <button className="font-normal text-base md:text-lg border border-white px-6 md:px-8 py-2 rounded-lg hover:bg-white/10 text-white transition-colors cursor-pointer w-full sm:w-auto">
               Explore
             </button>
 
-            {/* Responsive pagination */}
             <div className="flex items-center gap-2 md:gap-4">
               <button
                 onClick={handlePrevClick}

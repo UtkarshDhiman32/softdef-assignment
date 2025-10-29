@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { PlayCircle, ChevronRight } from 'lucide-react';
 
-// --- Data for the right side plant card slider ---
 const heroPlants = [
   {
-    imgSrc: "/c8eb5b1abede1308e0eaf899d1f7faae62a0c2f6.png", // Aapki original image
+    imgSrc: "/c8eb5b1abede1308e0eaf899d1f7faae62a0c2f6.png", 
     type: "Indoor Plant",
     name: "Aglaonema plant"
   },
   {
-    imgSrc: "/b48312dbddc890f7f35ef3964ae1e7900b89782c.png", // Trending se li hai
+    imgSrc: "/b48312dbddc890f7f35ef3964ae1e7900b89782c.png", 
     type: "Desk Plant",
     name: "Green Desk Plant"
   },
   {
-    imgSrc: "/95e728282f4fb901ee2edc80783c2fbd7df490c2.png", // Trending se li hai
+    imgSrc: "/95e728282f4fb901ee2edc80783c2fbd7df490c2.png", 
     type: "Succulent",
     name: "Potted Succulent"
   }
@@ -34,18 +33,12 @@ const Hero = () => {
   const currentPlant = heroPlants[currentPlantIndex];
 
   return (
-    // Main container - Padding adjust ki mobile ke liye
     <div className="relative w-full max-w-6xl mx-auto px-4 lg:px-4 py-10 lg:py-20 mt-10 text-gray-300">
 
-      {/* Flex container - Mobile mein column, Laptop mein row */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-12 lg:gap-0">
 
-        {/* --- Left Side: Text Content --- */}
-        {/* Mobile: Full width, centered text, no left offset */}
-        {/* Laptop (lg): Original width, left offset */}
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start lg:relative lg:-left-60 gap-1 text-center lg:text-left">
 
-          {/* Text Size adjust ki mobile/tablet ke liye */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight lg:leading-1.1">
             Earth's Exhale
           </h1>
@@ -54,31 +47,27 @@ const Hero = () => {
             environment and its essential role in sustaining life.
           </p>
 
-          {/* Button Group - Center kiya mobile mein */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6"> {/* Changed mt-4 to mt-6 */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6"> 
             <button className="font-extralight text-xl lg:text-2xl border-2 border-white px-8 lg:px-10 py-2 lg:py-3 rounded-2xl hover:text-gray-300 text-white transition-colors cursor-pointer w-full sm:w-auto">
               Buy Now
             </button>
             <button className="flex items-center gap-2 font-semibold text-white hover:text-gray-300 transition-colors cursor-pointer text-lg lg:text-base">
-              <PlayCircle size={40} className="lg:w-[52px] lg:h-[52px]" /> {/* Adjusted icon size */}
+              <PlayCircle size={40} className="lg:w-[52px] lg:h-[52px]" /> 
               Live Demo...
             </button>
           </div>
 
-          {/* Testimonial Card - Center kiya mobile mein */}
-          {/* Width adjust ki mobile ke liye */}
-          <div className="bg-[#333D33]/60 mt-12 lg:mt-20 backdrop-blur-md rounded-4xl border-t-2 border-l-2 border-white/20 w-full max-w-[410px] h-auto lg:h-[200px] flex flex-col sm:flex-row items-center gap-4 p-4 shadow-lg text-left"> {/* Adjusted height, flex direction */}
+
+          <div className="bg-[#333D33]/60 mt-12 lg:mt-20 backdrop-blur-md rounded-4xl border-t-2 border-l-2 border-white/20 w-full max-w-[410px] h-auto lg:h-[200px] flex flex-col sm:flex-row items-center gap-4 p-4 shadow-lg text-left"> 
             <img
               src="/testinomial.png"
               alt="Ronin Hamill"
-              // Adjusted margin for mobile
               className="w-16 h-16 rounded-full shrink-0 mt-4 sm:mt-0 sm:mb-0"
               onError={(e) => e.target.src = 'https://placehold.co/64x64/333D33/FFFFFF?text=Img'}
             />
-            <div className="flex flex-col justify-center items-center sm:items-start"> {/* Centered items on mobile */}
+            <div className="flex flex-col justify-center items-center sm:items-start"> 
               <h4 className="font-semibold text-white text-lg">Ronin Hamill</h4>
               <div className="flex items-center gap-2 mb-1">
-                {/* Stars */}
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className={`text-lg ${i < 4 ? 'text-yellow-400' : 'relative'}`}>
                     {i < 4 ? '★' : (
@@ -99,12 +88,7 @@ const Hero = () => {
 
         </div>
 
-        {/* --- Right Side: Plant Card --- */}
-        {/* Mobile: Full width, centered, no left offset, margin top */}
-        {/* Laptop (lg): Original width, left offset */}
-        {/* --- Right Side: Plant Card --- */}
-        <div className="w-full max-w-sm lg:w-1/3 lg:relative lg:left-60 mt-12 lg:mt-0"> {/* Adjusted max-width for mobile */}
-          {/* FIX: Yahaan 'backdrop-blur-md' add kiya hai */}
+        <div className="w-full max-w-sm lg:w-1/3 lg:relative lg:left-60 mt-12 lg:mt-0"> 
           <div className="bg-[#333D33]/80 border-t-2 border-l-2 border-white/20 backdrop-blur-md shadow-lg rounded-3xl p-6 text-center relative flex flex-col min-h-[450px]">
 
             <img
@@ -114,7 +98,7 @@ const Hero = () => {
               onError={(e) => e.target.src = 'https://placehold.co/400x450/2A332A/FFFFFF?text=Image+Error'}
             />
 
-            <div className="grow"> {/* Changed flex-grow to grow */}
+            <div className="grow"> 
               <p className="text-gray-400 text-base md:text-lg">{currentPlant.type}</p>
               <h3 className="text-xl md:text-2xl font-semibold text-gray-300 mb-2">{currentPlant.name}</h3>
             </div>
