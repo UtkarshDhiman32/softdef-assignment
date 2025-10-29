@@ -71,7 +71,7 @@ const PlantCard = ({ plant }) => {
 const TopSelling = () => {
   return (
     <div id="top-selling-section" className='flex flex-col items-center w-full max-w-6xl mx-auto px-4 py-24'>
-      <h2 className='font-semibold text-white text-5xl mb-24'>Our Top Selling Plants</h2>
+      <h2 className='font-semibold text-white text-5xl mb-24 text-center'>Our Top Selling Plants</h2>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-20">
         {plantData.map((plant) => (

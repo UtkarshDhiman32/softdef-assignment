@@ -50,11 +50,11 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 mt-2 bg-black/80 backdrop-blur-md rounded-lg shadow-lg mx-4 py-4 px-6 flex flex-col items-center gap-4">
-          <a href="#" className="font-medium text-white hover:text-green-300 cursor-pointer transition-colors block w-full text-center py-2">Home</a>
-          <a href="#" className="font-medium hover:text-white cursor-pointer transition-colors block w-full text-center py-2">Plants Type</a>
-          <a href="#" className="font-medium hover:text-white cursor-pointer transition-colors block w-full text-center py-2">More</a>
-          <a href="#" className="font-medium hover:text-white cursor-pointer transition-colors block w-full text-center py-2">Contact</a>
+        <div className="md:hidden  absolute top-full left-0 right-0 mt-2 bg-black/60 backdrop-blur-md rounded-lg shadow-lg mx-4 py-4 px-6 flex flex-col items-center gap-4">
+          <a href="#" className="font-medium text-white  cursor-pointer transition-colors block w-full text-center py-2">Home</a>
+          <a href="#" className="font-medium text-white  cursor-pointer transition-colors block w-full text-center py-2">Plants Type</a>
+          <a href="#" className="font-medium text-white  cursor-pointer transition-colors block w-full text-center py-2">More</a>
+          <a href="#" className="font-medium text-white  cursor-pointer transition-colors block w-full text-center py-2">Contact</a>
           <div className="flex items-center gap-6 mt-4 pt-4 border-t border-gray-700 w-full justify-center">
             <img src="/Search.png" alt="search" className="w-5 h-5 cursor-pointer hover:opacity-80" />
             <img src="/bag.png" alt="bag" className="w-5 h-5 cursor-pointer hover:opacity-80" />

@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className='w-full max-w-6xl mx-auto px-4 py-16 text-gray-300'>
 
-            <div className='flex justify-between items-start flex-wrap gap-y-8 mb-12'> 
+            <div className='flex justify-between items-start flex-wrap gap-y-8 mb-12'>
 
                 <div className='w-full md:w-2/5 flex flex-col gap-4 pr-8'>
                     <div className='flex items-center gap-x-2'>
@@ -32,8 +32,8 @@ const Footer = () => {
                 </div>
 
                 <div className='w-full md:w-2/5 flex flex-col gap-4'>
-                    <h2 className='font-semibold text-xl text-white'>For Every Update.</h2> 
-                    <div className='relative w-full max-w-sm'> 
+                    <h2 className='font-semibold text-xl text-white'>For Every Update.</h2>
+                    <div className='relative w-full max-w-sm'>
                         <input
                             type="email"
                             className='border-white/50 border rounded-lg p-3 pr-28 w-full text-white bg-transparent placeholder-gray-400 focus:border-white focus:outline-none'
@@ -49,8 +49,7 @@ const Footer = () => {
 
             </div>
 
-            {/* Bottom Row: Copyright */}
-            <p className="text-xl text-right mr-44  text-white -mt-20"> {/* 'text-right' se right align kiya */}
+            <p className="text-xl text-white mt-8 md:-mt-18 lg:-mt-20 mr-6 text-center md:text-right lg:mr-44 ">
                 FloraVision @ all right reserve
             </p>
 

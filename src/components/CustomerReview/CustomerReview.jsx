@@ -32,7 +32,7 @@ const ReviewCard = ({ review }) => {
         />
         <div className="flex flex-col">
           <h3 className="text-2xl font-semibold text-white">{review.name}</h3>
-          <div className="flex items-center gap-1 mt-1"> {/* Thoda margin add kiya */}
+          <div className="flex items-center gap-1 mt-1"> 
             <span className="text-yellow-400 text-lg">★</span>
             <span className="text-yellow-400 text-lg">★</span>
             <span className="text-yellow-400 text-lg">★</span>
@@ -51,24 +51,22 @@ const ReviewCard = ({ review }) => {
 
 
 
-// --- Main CustomerReview Component ---
 const CustomerReview = () => {
   return (
-    // Main container ko 'flex-col' kar diya taaki title aur grid stack hon
     <div className='flex flex-col items-center justify-center w-full py-16 gap-20'>
       
-      {/* Title Wrapper (Aapka original code) */}
-      <h2 className="relative text-5xl font-semibold px-4 py-2 text-white ">
-        <span 
-          className="absolute bottom-0 left-0 w-12 h-14 border-b-4 border-l-4 border-[#FCDA69] rounded-bl-xl" 
-        />
-        Customer Review
-        <span 
-          className="absolute top-0 right-0 w-12 h-14 border-t-4 border-r-4 border-[#FCDA69] rounded-tr-xl" 
-        />
-      </h2>
+     <h2 className="relative text-5xl font-semibold px-4 py-2 text-white text-center ">
+  <span 
+    // FIX: Margin ko sirf desktop (lg:) par apply kiya
+    className="absolute bottom-0 left-0 w-8 h-12 md:w-12 ml-8 md:h-14 border-b-4 border-l-4 border-[#FCDA69] rounded-bl-xl lg:-ml-6 md:-ml-5" 
+  />
+  Customer Review
+  <span 
+    // FIX: Margin ko sirf desktop (lg:) par apply kiya
+    className="absolute top-0 right-0 w-8 h-10 md:w-12 md:-mr-5 md:h-14 mr-6  border-t-4 border-r-4 border-[#FCDA69] rounded-tr-xl lg:-mr-3" 
+  />
+</h2>
 
-      {/* --- ADDED: Grid container for review cards --- */}
       <div className="w-full max-w-6xl  grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
         {reviewData.map((review) => (
           <ReviewCard key={review.name} review={review} />
